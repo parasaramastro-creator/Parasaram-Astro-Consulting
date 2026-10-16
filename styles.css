@@ -175,7 +175,8 @@ a { color: inherit; text-decoration: none; }
   text-align: center;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 1.2rem;
+  font-weight: 700;
+  font-size: 0.96rem;
   letter-spacing: 0.14em;
   color: var(--brown-logo);
   opacity: 0.45;
@@ -204,7 +205,7 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 22px;
 }
 .hero-tagline img {
-  height: 34px;
+  height: 41px;
   width: auto;
   min-width: 0;
 }
@@ -621,7 +622,7 @@ input:focus, textarea:focus, select:focus {
     padding: 54px 0 70px; /* top room for the watermark */
     margin-bottom: 30px;
   }
-  .hero-watermark { top: 14px; font-size: 1.05rem; }
+  .hero-watermark { top: 14px; font-size: 0.84rem; }
 
   .hero-intro-mark {
     display: block;
@@ -637,11 +638,12 @@ input:focus, textarea:focus, select:focus {
     animation: intro-pop 0.9s cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
   }
 
-  .hero-tagline { gap: 10px; }
-  /* Scales with the screen so it always fits on one line beside the rules */
-  .hero-tagline img { height: auto; width: min(68vw, 260px); }
+  .hero-tagline { gap: 6px; }
+  /* Scales with the screen; may shrink on the narrowest phones so it stays
+     on one line beside the rules */
+  .hero-tagline img { height: auto; width: min(82vw, 312px); flex-shrink: 1; }
   .hero-tagline::before,
-  .hero-tagline::after { flex-basis: 18px; }
+  .hero-tagline::after { flex-basis: 10px; }
 
   .hero-intro .hero-tagline,
   .hero-intro .verse,
